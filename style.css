@@ -1,0 +1,57 @@
+:root {
+    --bg-base: #00809D;
+    --bg-base2: #F3A26D;
+    --bg-base3: #FCECDD;
+}
+
+body{
+    background-color: var(--bg-base2);
+    display: flex;
+    direction: column;
+}
+.sticky-notes{
+    font-family: "Sometype Mono";
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+hr{
+    margin: 0;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc)
+}
+h1{
+    margin: 0;
+    font-size: 1.1em;
+}
+.notes-header{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+.notes-button{
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.notes-button > button{
+    margin: 0;
+    padding: 0;
+    width: 13px;
+    height: 13px;
+}
+.notes-container{
+    gap: 0.2em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: #FCECDD;
+    padding: 0.5em;
+    border: solid black;
+    width: 20rem;
+    aspect-ratio: 1/1;
+}
