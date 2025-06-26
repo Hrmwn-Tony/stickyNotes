@@ -8,23 +8,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sticky Note</title>
+    <script src="main.js" type="module"></script>
 </head>
 <body>
     <div class="header"></div>
     <div class="sticky-notes">
-        <div class="notes-container">
+        <div class="notes-container" id="1">
             <div class="notes-header">
                 <h1 contenteditable="true">TITLE HERE</h1>
                 <div class="notes-button">
-                    <button></button>
-                    <button></button>
-                    <button></button>
+                    <button class="btn-1" id="finish"></button>
+                    <button class="btn-1"></button>
+                    <button class="btn-1"></button>
                 </div>
             </div>
             <hr>
-            <div class="notes-content" contenteditable="true">text</div>
+            <p class="notes-content" contenteditable="true">text</p>
+        </div>
+        <div class="notes-container" id="2">
+            <div class="notes-header">
+                <h1 contenteditable="true">TITLE HERE</h1>
+                <div class="notes-button">
+                    <button class="btn-1" id="finish"></button>
+                    <button class="btn-1"></button>
+                    <button class="btn-1"></button>
+                </div>
+            </div>
+            <hr>
+            <p class="notes-content" contenteditable="true">text</p>
         </div>
     </div>
+    
     
 </body>
 </html>

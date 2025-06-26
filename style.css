@@ -2,6 +2,10 @@
     --bg-base: #00809D;
     --bg-base2: #F3A26D;
     --bg-base3: #FCECDD;
+    --container-size-min: 15rem;
+    --container-size-max: 20rem;
+    --container-size-ideal: 17rem;
+    font-size: 14px;
 }
 
 body{
@@ -25,6 +29,7 @@ hr{
     background-image: linear-gradient(to right, #ccc, #333, #ccc)
 }
 h1{
+    max-width: 75%;
     margin: 0;
     font-size: 1.1em;
 }
@@ -52,6 +57,9 @@ h1{
     background-color: #FCECDD;
     padding: 0.5em;
     border: solid black;
-    width: 20rem;
+    width: max(var(--container-size-min), var(--container-size-max));
     aspect-ratio: 1/1;
+}
+.notes-content{
+    font-size: 1rem;
 }
