@@ -1,6 +1,3 @@
-import { addNewNotes } from "./interactivity.js";
+import { StickyNotes } from "./interactivity.js";
+customElements.define('sticky-notes', StickyNotes);
 
-const button = document.querySelector(".sticky-notes");
-button.addEventListener("click", function(event){
-    addNewNotes(event);
-})
