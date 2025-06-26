@@ -38,9 +38,10 @@ export class StickyNotes extends HTMLElement {
     }
 
     connectedCallback(){
-        this.shadowRoot.appendChild(this.#notesContainer);
+        this.#_shadowRoot.appendChild(this.#notesContainer);
         const noteStyle = document.createElement('link');
         noteStyle.setAttribute('rel', `stylesheet`);
-        noteStyle.setAttribute('href', './sticky-notes-styles.css');
+        noteStyle.setAttribute('href', './sticky-notes-style.css');
+        this.#_shadowRoot.appendChild(noteStyle);
     }
 }
