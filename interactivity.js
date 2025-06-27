@@ -8,6 +8,9 @@ export class StickyNotes extends HTMLElement {
     #notesButtondiv;
     #horizontalLine;
     #notesContent;
+    #btnAdd
+    #btnDel
+    #btnPin
     constructor(){
         super();
         this.#_shadowRoot = this.attachShadow({mode: 'open'});
@@ -20,8 +23,15 @@ export class StickyNotes extends HTMLElement {
         this.#horizontalLine = this.makeElement('hr', 'hr-header');
         this.#notesContent = this.makeElement('p', 'notes-content');
 
-        this.assignParentChild(this.#notesContainer, [this.#notesHeader, this.#notesContent]);
-        this.assignParentChild(this.#notesHeader, [this.#h1Title, this.#notesButtondiv, this.#horizontalLine]);
+        this.#btnAdd = this.makeElement("button", 'button-add');
+        this.#btnDel = this.makeElement("button", 'button-del');
+        this.#btnPin = this.makeElement("button", 'button-pin');
+
+        this.assignParentChild(this.#notesContainer, [this.#notesHeader, this.#horizontalLine, this.#notesContent]);
+        this.assignParentChild(this.#notesHeader, [this.#h1Title, this.#notesButtondiv]);
+        this.assignParentChild(this.#notesButtondiv, [this.#btnAdd,this.#btnDel,this.#btnPin]);
+
+        this.#h1Title.textContent = "Title";
     }
 
     makeElement(html, className){
@@ -43,5 +53,9 @@ export class StickyNotes extends HTMLElement {
         noteStyle.setAttribute('rel', `stylesheet`);
         noteStyle.setAttribute('href', './sticky-notes-style.css');
         this.#_shadowRoot.appendChild(noteStyle);
+    }
+
+    printThisSucka(){
+        console.log("your mom is so ugly");
     }
 }

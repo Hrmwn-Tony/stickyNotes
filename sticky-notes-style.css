@@ -16,26 +16,29 @@ hr{
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc)
 }
-h1{
+.h1-title{
     max-width: 75%;
     margin: 0;
     font-size: 1.1em;
 }
 .notes-header{
+    height: fit-content;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
 }
-.button-div{
-    gap: 5px;
-    display: flex;
-    flex-direction: row;
-}
-.notes-button > button{
+.button-div > button{
     margin: 0;
     padding: 0;
     width: 13px;
     height: 13px;
+}
+.button-div{
+    padding: 0;
+    height: 14px;
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
 }
 .notes-container{
     gap: 0.2em;
@@ -50,4 +53,17 @@ h1{
 }
 .notes-content{
     font-size: 1rem;
+}
+
+.button-add{
+    background-color: #7dce76;
+
+}
+.button-del{
+    background-color: #ff6060;
+
+}
+.button-pin{
+    background-color: #fff678;
+
 }
