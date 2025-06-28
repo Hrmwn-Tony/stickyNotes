@@ -11,8 +11,12 @@ export class StickyNotes extends HTMLElement {
     #btnAdd
     #btnDel
     #btnPin
-    constructor(){
+    #dataTemplate = {id: null,title: 'Title',content: null};
+    #stickyIndex;
+
+    constructor(stickyData, indexNum){
         super();
+        this.#stickyIndex = indexNum;
         this.#_shadowRoot = this.attachShadow({mode: 'open'});
 
         this.#notesContainer = this.makeElement("div", 'notes-container')
@@ -31,7 +35,8 @@ export class StickyNotes extends HTMLElement {
         this.assignParentChild(this.#notesHeader, [this.#h1Title, this.#notesButtondiv]);
         this.assignParentChild(this.#notesButtondiv, [this.#btnAdd,this.#btnDel,this.#btnPin]);
 
-        this.#h1Title.textContent = "Title";
+        this.#h1Title.textContent = `${stickyData.title}`;
+        this.#notesContent.textContent = `${indexNum}`
     }
 
     makeElement(html, className){
@@ -55,7 +60,8 @@ export class StickyNotes extends HTMLElement {
         this.#_shadowRoot.appendChild(noteStyle);
     }
 
-    printThisSucka(){
-        console.log("your mom is so ugly");
+    getStickyId(){
+        return this.#stickyIndex;
     }
+
 }
