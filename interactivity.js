@@ -60,7 +60,7 @@ export class StickyNotes extends HTMLElement {
         this.#_shadowRoot.appendChild(noteStyle);
     }
 
-    getStickyId(){
+    getStickyIndex(){
         return this.#stickyIndex;
     }
 
